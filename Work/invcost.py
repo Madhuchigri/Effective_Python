@@ -4,7 +4,7 @@ import csv
 
 def inventory_cost(filename):
     with open(filename, 'rt') as FH:
-        rows = csv.reader(FH)  # using ssv.reader method to read the lines..no need of split 
+        rows = csv.reader(FH)  # using csv.reader method to read the lines..no need of split 
         headers = next(rows)
         total = 0.0
         for row in rows:
