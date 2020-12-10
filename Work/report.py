@@ -14,4 +14,4 @@ def read_inventory(filename):
 filename = "inventory.csv"
 
 report = read_inventory(filename)
-print(report)
+print("Inventory products",report)
