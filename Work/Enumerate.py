@@ -5,14 +5,13 @@ def inventory_cost(filename):
         rows = csv.reader(FH)  # using ssv.reader method to read the lines..no need of split
         headers = next(rows)
         total = 0.0
-        for row in rows:
+        for row_num, row in enumerate(rows,start=1):
             # print(line)
             try:
                 val = int(row[1]) * float(row[2])
                 total += val
             except ValueError:
-                    for Badrow, row in enumerate(FH):
-                        print("got invalid row", Badrow,row)
+                     print(f"Row{row_num}:Couldn't convert{row}")
         return total
 
 cost = inventory_cost('missing.csv')
